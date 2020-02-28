@@ -1,0 +1,23 @@
+Program 2: Write a program to find the sum of the first 10 integer numbers.
+
+
+ASSEMBLY CODE:
+
+                         AREA FIRST10, CODE, READONLY
+                         ENTRY
+START                    MOV R0,#09                 ; TAKE HIGHEST INTEGER  R0=9
+                         MOV R1,#00                 ;INITIALIZE R1=0
+ BACK                    ADD R1,R1,R0               ;ADD 1ST NUMBER
+                         SUB R0,R0,#01              ;DECREMENT R0 BY 1
+                         CMP R0,#00                 ;CHECK WHETHER WE REACHED 0
+                         BNE BACK                   ;LOOP IF NOT EQUAL, JUMP TO BACK
+                         NOP                        ;NO OPERATION, WAIT FOR 1 CYCLE
+                         END
+
+OUTPUT
+PRE
+R0=09
+R1=00
+POST
+R0=00
+R1=45(DECIMAL) 0X0000002D (HEX)
