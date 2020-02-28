@@ -1,0 +1,19 @@
+Program 1: Write a program to multiply two 16 bit binary numbers.
+
+ASSEMBLY CODE:
+
+                         AREA MUL16, CODE, READONLY
+                         ENTRY
+START                    MOV R0,#0X00008000              ;GET FIRST NUMBER IN R0
+                         MOV R1,#0X00008000              ;GET SECOND NUMBER IN R1
+                         MUL R2,R0,R1                    ;MULTIPLICATION RESULT IS STORED IN R2
+                         NOP                             ;NO OPERATION, WAIT FOR 1 CYCLE
+                         END
+
+OUTPUT
+PRE
+R0=0X00008000
+R1=0X00008000
+R2=0X00000000
+POST
+R2=0X40000000
